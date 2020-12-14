@@ -23,6 +23,8 @@ $WhoNUM = trim($WhoNUM);
 	if ($mysqli->connect_error) {
 	    die('Ошибка : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 	}
+
+mysqli_set_charset($mysqli, "utf8");
     
     $result = $mysqli->query("SELECT id, Type, Description, imgname FROM Type WHERE id = 1 OR id = 5");
 
