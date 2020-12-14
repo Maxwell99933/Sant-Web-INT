@@ -64,6 +64,8 @@ if ($IDposet == ""){
 	    die('Ошибка : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
     }
 
+mysqli_set_charset($mysqli, "utf8");
+
     $result = $mysqli->query("SELECT Date_EV, Time_EV FROM Events WHERE Id_Events='$radio' ");
 
 
