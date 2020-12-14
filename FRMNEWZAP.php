@@ -48,6 +48,8 @@ $IDposet = trim($IDposet);
 	if ($mysqli->connect_error) {
 	    die('Ошибка : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 	}
+
+mysqli_set_charset($mysqli, "utf8");
     
     $result = $mysqli->query("SELECT Id_Events, Quantity_For_events, Date_EV, Time_EV FROM Events WHERE type_id='$MPZ' AND id_status = 2");
 
